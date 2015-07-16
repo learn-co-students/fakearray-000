@@ -1,7 +1,7 @@
-class FakeArray
+class FakeArray < Array
 
-  # you'll need a splat in this class somewhere
-
-
+  def initialize(*things)
+    super(things)
+  end
 
 end

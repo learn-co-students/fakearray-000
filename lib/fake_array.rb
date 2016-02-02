@@ -12,12 +12,9 @@ class FakeArray
   end
 
   def each
-  	counter = 0
-  	while array.size >= counter
-  		yield(array[counter])
-  		counter +=1
-  	end
-  	array
+    @array.each do |item|
+      yield item
+    end
   end
-  
+
 end

@@ -2,20 +2,29 @@ class FakeArray
 	attr_accessor :array, :name
 
 	def initialize(*splat)
-		@array = []
-		i = 0
+		@fake_array = []
 		splat.each do |x|
-			#print x
-			@array[i] = x; i += 1
+			@fake_array << x
 		end
-		puts @array[0]
-		puts @array[1]
 
+		puts "element fake_array[0] is #{@fake_array[0]}"
 	end
 
-	def fake_array
-			@array[i] = x; i += 1
+	def [](index)
+		@fake_array[index]
 	end
+
+	def each 
+		@fake_array.each do |x|
+			yield x
+		end
+	end
+
+	def first
+		@fake_array[0]
+	end
+
+
 
 
   # you'll need a splat in this class somewhere

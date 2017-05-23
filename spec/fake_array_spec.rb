@@ -1,5 +1,5 @@
 describe 'fake array' do
-
+=begin
   describe '#reformat_languages' do
 
     it 'should allow you to index into it' do
@@ -28,5 +28,5 @@ describe 'fake array' do
     end
 
   end
-
+=end
 end
